@@ -11,8 +11,8 @@ jobs:
       - uses: step-security/harden-runner@55d479fb1c5bcad5a4f9099a5d9f37c8857b2845 # v2.4.1
         with:
          egress-policy: audit
-         allowed-endpoints: |
-           github.com:443
+         allowed-endpoints: github.com:443
+         required: true
     
       - name: Checkout code
         uses: actions/checkout@v2
